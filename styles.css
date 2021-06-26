@@ -1,0 +1,169 @@
+/* GLOBAL STYLES */
+*{box-sizing: border-box;}
+
+:root{
+    --violet: hsl(263, 55%, 52%);
+    --dark-gray: hsl(217, 19%, 35%);
+    --black-blue: hsl(219, 29%, 14%);
+    --light-gray: hsl(0, 0%, 81%);
+    --gray-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+img{
+    border-radius: 50%;
+}
+
+/* TYPOGRAPHY */
+
+html{
+    font-size: 13px;
+    font-family: Barlow Semi, sans-serif;
+}
+
+h3{
+    font-size: 1.3rem;
+    color:hsl(0, 0%, 100%)
+}
+
+h4{
+    font-size:1.1rem;
+    color:hsl(0, 0%, 50%)
+}
+
+p{
+    font-size:1.05rem;
+    color: var(--white);
+    /* font-weight: 600; */
+}
+
+.comment-body{
+    color: hsl(0, 0%, 70%);
+    position: relative;
+    z-index: 2;
+}
+
+.white h3,
+.white h4,
+.white p{
+    color: var(--dark-gray)
+}
+
+.white h4{
+    color:hsl(0, 0%, 40.5%)
+}
+
+.comment-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* LAYOUT */
+
+body{
+    background-color: var(--light-gray);
+    margin:0;
+    padding:.8em;
+    padding-top: 3.5em;
+}
+
+.violet{
+    background-color: var(--violet);
+    position: relative;
+}
+
+.dark-gray{
+    background-color: var(--dark-gray);
+}
+
+.black-blue{
+    background-color: var(--black-blue);
+}
+
+.white{
+    background-color: var(--white);
+}
+
+.testimony{
+    padding:1.2em;
+    border-radius: 10px;
+    margin-bottom:1em;
+}
+
+.profile-data{
+    position:relative;
+    width:220px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.profile-data img{
+    width:50px;
+    height:50px;
+}
+
+.profile-data h3,
+.profile-data h4{
+    margin:0;
+}
+
+.attribution{
+    margin-top:15em;
+}
+
+.quotes{
+    border-radius: 0;
+    position:absolute;
+    right: 70px;
+    top:0px;
+}
+
+@media (min-width:930px){
+    .testimony{
+        margin:0;
+    }
+
+    .container{
+        width:80%;
+        max-width: 1200px;
+        margin:auto;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 50% 50%;
+        gap:1em;    
+        grid-template-areas: 
+        "violet violet dark-gray white"
+        "white2 black-blue black-blue white";
+    }
+
+    .violet{
+        grid-area: violet;
+    }
+
+    .dark-gray{
+        grid-area:dark-gray;
+    }
+
+    .harmon{
+        grid-area:white2;
+    }
+
+    .black-blue{
+        grid-area:black-blue;
+    }
+
+    .kira{
+        grid-area:white;
+    }
+}
+
+
